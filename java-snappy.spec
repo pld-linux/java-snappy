@@ -97,7 +97,7 @@ ln -nfs %{srcname}-%{version} %{_javadocdir}/%{srcname}
 %{_javadir}/snappy-java-%{version}.jar
 %{_javadir}/snappy-java.jar
 
-%if %{witht javadoc}
+%if %{with javadoc}
 %files javadoc
 %defattr(644,root,root,755)
 %{_javadocdir}/%{srcname}-%{version}
