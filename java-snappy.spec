@@ -6,7 +6,7 @@
 
 %define		srcname		snappy
 %include	/usr/lib/rpm/macros.java
-Summary:	Fast compressor/decompresser
+Summary:	Snappy compressor/decompressor for Java
 Name:		java-%{srcname}
 Version:	1.0.4.1
 Release:	1
@@ -16,7 +16,7 @@ Group:		Libraries/Java
 # cd snappy-java && hg archive -p snappy-java-1.0.4.1/ -X 'lib/*.jar' -t tgz ../snappy-java-1.0.4.1-CLEAN.tgz
 Source0:	snappy-java-%{version}-CLEAN.tgz
 # Source0-md5:	53d74de12e54772299b03db495c21004
-URL:		http://code.google.com/p/snappy-java
+URL:		http://xerial.org/snappy-java/
 BuildRequires:	java-osgi-core >= 4.3
 BuildRequires:	jdk
 BuildRequires:	jpackage-utils
@@ -29,8 +29,9 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A Java port of the snappy, a fast compresser/decompresser written in
-C++.
+The snappy-java is a Java port of the snappy, a fast
+compresser/decompresser written in C++, originally developed by
+Google.
 
 %package javadoc
 Summary:	Javadocs for %{name}
