@@ -5,7 +5,6 @@
 %bcond_with	javadoc		# don't build javadoc
 
 %define		srcname		snappy
-%include	/usr/lib/rpm/macros.java
 Summary:	Snappy compressor/decompressor for Java
 Name:		java-%{srcname}
 Version:	1.0.4.1
