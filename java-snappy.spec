@@ -4,11 +4,13 @@
 # Conditional build:
 %bcond_with	javadoc		# don't build javadoc
 
+%{?use_default_jdk:%use_default_jdk 8}
+
 %define		srcname		snappy
 Summary:	Snappy compressor/decompressor for Java
 Name:		java-%{srcname}
 Version:	1.0.4.1
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries/Java
 # hg clone --insecure -r snappy-java-1.0.4.1 https://code.google.com/p/snappy-java/
@@ -17,10 +19,10 @@ Source0:	snappy-java-%{version}-CLEAN.tgz
 # Source0-md5:	53d74de12e54772299b03db495c21004
 URL:		http://xerial.org/snappy-java/
 BuildRequires:	java-osgi-core >= 4.3
-BuildRequires:	jdk
+%buildrequires_jdk
 BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.556
 Requires:	java-osgi-core >= 4.3
 Requires:	jpackage-utils
 Requires:	jre
