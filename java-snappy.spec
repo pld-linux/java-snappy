@@ -25,7 +25,6 @@ BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.556
 Requires:	java-osgi-core >= 4.3
 Requires:	jpackage-utils
-Requires:	jre
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
